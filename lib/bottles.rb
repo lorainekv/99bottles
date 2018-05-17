@@ -1,9 +1,16 @@
 class Bottles
   def verse(count)
-    <<-VERSE
+    if count > 0
+      <<-VERSE
 #{bottle_string(count)} of beer on the wall, #{bottle_string(count)} of beer.
 Take #{pronoun(count - 1)} down and pass it around, #{bottle_string(count - 1)} of beer on the wall.
-    VERSE
+      VERSE
+    else
+      <<-VERSE
+#{bottle_string(count).capitalize} of beer on the wall, #{bottle_string(count)} of beer.
+Go to the store and buy some more, 99 bottles of beer on the wall.
+      VERSE
+    end
   end
 
   def pronoun(count)
