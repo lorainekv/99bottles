@@ -13,6 +13,11 @@ Go to the store and buy some more, 99 bottles of beer on the wall.
     end
   end
 
+  def verses(*number)
+
+  end
+  private
+
   def pronoun(count)
     if count == 0
       "it"
